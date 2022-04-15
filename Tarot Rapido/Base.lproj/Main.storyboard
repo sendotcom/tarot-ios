@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="Tarot_Rapido" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MAo-8Y-4Ou">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="300" id="JfK-ae-ZJf" customClass="TableViewCell" customModule="Tarot_Rapido" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JfK-ae-ZJf" id="cCR-F6-GfQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-aK-E1B">
+                                                    <rect key="frame" x="20" y="138" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" image="hightpriest" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-3q-sKl">
+                                                    <rect key="frame" x="186" y="32" width="245" height="245"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="245" id="Fd1-wc-Hqg"/>
+                                                        <constraint firstAttribute="width" secondItem="yUQ-3q-sKl" secondAttribute="height" id="bih-aC-99V"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HcO-aK-E1B" firstAttribute="leading" secondItem="cCR-F6-GfQ" secondAttribute="leading" constant="20" id="1et-QK-pVl"/>
+                                                <constraint firstItem="HcO-aK-E1B" firstAttribute="centerY" secondItem="cCR-F6-GfQ" secondAttribute="centerY" id="Ij6-ex-mhH"/>
+                                                <constraint firstItem="yUQ-3q-sKl" firstAttribute="centerY" secondItem="cCR-F6-GfQ" secondAttribute="centerY" multiplier="0.1112" constant="137.81999999999999" id="ZIX-zF-7TA"/>
+                                                <constraint firstItem="yUQ-3q-sKl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HcO-aK-E1B" secondAttribute="trailing" constant="20" id="hzP-w7-Gr3"/>
+                                                <constraint firstAttribute="trailing" secondItem="yUQ-3q-sKl" secondAttribute="trailing" constant="-17" id="tOY-sp-KCh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="imagenCarta" destination="yUQ-3q-sKl" id="E3d-Su-eeh"/>
+                                            <outlet property="nombreCarta" destination="HcO-aK-E1B" id="9O2-dC-dlz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cH9-8L-iOB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IFR-lq-eqw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MAo-8Y-4Ou" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BCa-QH-Ot5"/>
+                            <constraint firstItem="MAo-8Y-4Ou" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="GEn-IZ-FJx"/>
+                            <constraint firstItem="MAo-8Y-4Ou" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="M7r-Mz-oK8"/>
+                            <constraint firstItem="MAo-8Y-4Ou" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lOh-BM-D38"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="MAo-8Y-4Ou" id="n39-4A-l1S"/>
+                        <segue destination="0za-zp-lx7" kind="presentation" identifier="cartaDetallesSegue" id="3uX-UA-W2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="67.633928571428569"/>
+        </scene>
+        <!--Carta Detalles-->
+        <scene sceneID="7yf-p1-6WU">
+            <objects>
+                <viewController id="0za-zp-lx7" customClass="CartaDetalles" customModule="Tarot_Rapido" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tiw-2u-Dfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-9y-YRY">
+                                <rect key="frame" x="20" y="20" width="371" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XoW-1b-fMm">
+                                <rect key="frame" x="20" y="63" width="374" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="1J5-ew-2SG"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-Gz-XTE">
+                                <rect key="frame" x="24" y="519" width="367" height="282"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interpretación de la carta en posicion Normal: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9y-Qm-Veu">
+                                <rect key="frame" x="24" y="495" width="367" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tsl-LE-8Jo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XoW-1b-fMm" firstAttribute="top" secondItem="xxO-9y-YRY" secondAttribute="bottom" constant="7" id="97P-eE-kSt"/>
+                            <constraint firstItem="Tsl-LE-8Jo" firstAttribute="trailing" secondItem="xxO-9y-YRY" secondAttribute="trailing" constant="23" id="BO3-G5-Uhb"/>
+                            <constraint firstItem="xxO-9y-YRY" firstAttribute="leading" secondItem="Tsl-LE-8Jo" secondAttribute="leading" constant="20" id="LZm-vY-NOk"/>
+                            <constraint firstItem="z9y-Qm-Veu" firstAttribute="top" secondItem="XoW-1b-fMm" secondAttribute="bottom" constant="22" id="Nx2-Is-UGM"/>
+                            <constraint firstItem="Tsl-LE-8Jo" firstAttribute="bottom" secondItem="RAV-Gz-XTE" secondAttribute="bottom" constant="7" id="Qm3-cE-WOQ"/>
+                            <constraint firstItem="RAV-Gz-XTE" firstAttribute="top" secondItem="XoW-1b-fMm" secondAttribute="bottom" constant="46" id="Sdw-tI-Scb"/>
+                            <constraint firstItem="xxO-9y-YRY" firstAttribute="top" secondItem="Tsl-LE-8Jo" secondAttribute="top" constant="20" id="UAP-fg-zCc"/>
+                            <constraint firstItem="RAV-Gz-XTE" firstAttribute="top" secondItem="z9y-Qm-Veu" secondAttribute="bottom" constant="3.5" id="arY-ZD-6Aj"/>
+                            <constraint firstItem="Tsl-LE-8Jo" firstAttribute="trailing" secondItem="z9y-Qm-Veu" secondAttribute="trailing" constant="23" id="cqU-UL-Q5b"/>
+                            <constraint firstItem="XoW-1b-fMm" firstAttribute="leading" secondItem="Tsl-LE-8Jo" secondAttribute="leading" constant="20" id="d79-lu-VWb"/>
+                            <constraint firstItem="z9y-Qm-Veu" firstAttribute="leading" secondItem="Tsl-LE-8Jo" secondAttribute="leading" constant="24" id="i8I-o8-knO"/>
+                            <constraint firstItem="Tsl-LE-8Jo" firstAttribute="trailing" secondItem="XoW-1b-fMm" secondAttribute="trailing" constant="20" id="wPK-FD-mPY"/>
+                            <constraint firstItem="Tsl-LE-8Jo" firstAttribute="trailing" secondItem="RAV-Gz-XTE" secondAttribute="trailing" constant="23" id="xHy-Sq-bLw"/>
+                            <constraint firstItem="RAV-Gz-XTE" firstAttribute="leading" secondItem="Tsl-LE-8Jo" secondAttribute="leading" constant="24" id="yJS-cz-NeD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kwP-Jq-A2N"/>
+                    <connections>
+                        <outlet property="cartaDescripcionNormal" destination="RAV-Gz-XTE" id="eZ0-qJ-ums"/>
+                        <outlet property="cartaDetalleDePosicionTexto" destination="z9y-Qm-Veu" id="b28-Iw-iZo"/>
+                        <outlet property="cartaImagen" destination="XoW-1b-fMm" id="mUg-r9-bsr"/>
+                        <outlet property="cartaTitulo" destination="xxO-9y-YRY" id="Mhd-wu-PQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psy-lp-l8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="76.339285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hightpriest" width="632" height="994"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

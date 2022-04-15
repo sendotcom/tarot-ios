@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A62FB15028036DA6004AF046 /* Cartas.json in Resources */ = {isa = PBXBuildFile; fileRef = A62FB14F28036DA6004AF046 /* Cartas.json */; };
+		A62FB15228036DF3004AF046 /* Cartas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FB15128036DF3004AF046 /* Cartas.swift */; };
+		A62FB15528039CC2004AF046 /* CartaDetalles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FB15428039CC2004AF046 /* CartaDetalles.swift */; };
 		A6C035AB280121FF00E7CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C035AA280121FF00E7CF95 /* AppDelegate.swift */; };
 		A6C035AD280121FF00E7CF95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C035AC280121FF00E7CF95 /* SceneDelegate.swift */; };
-		A6C035AF280121FF00E7CF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C035AE280121FF00E7CF95 /* ViewController.swift */; };
+		A6C035AF280121FF00E7CF95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C035AE280121FF00E7CF95 /* TableViewController.swift */; };
 		A6C035B2280121FF00E7CF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C035B0280121FF00E7CF95 /* Main.storyboard */; };
 		A6C035B42801220100E7CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C035B32801220100E7CF95 /* Assets.xcassets */; };
 		A6C035B72801220100E7CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C035B52801220100E7CF95 /* LaunchScreen.storyboard */; };
+		A6D0EA2F280123E800EFE541 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D0EA2E280123E800EFE541 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A62FB14F28036DA6004AF046 /* Cartas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cartas.json; sourceTree = "<group>"; };
+		A62FB15128036DF3004AF046 /* Cartas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartas.swift; sourceTree = "<group>"; };
+		A62FB15428039CC2004AF046 /* CartaDetalles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaDetalles.swift; sourceTree = "<group>"; };
 		A6C035A7280121FF00E7CF95 /* Tarot Rapido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tarot Rapido.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C035AA280121FF00E7CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C035AC280121FF00E7CF95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6C035AE280121FF00E7CF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6C035AE280121FF00E7CF95 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A6C035B1280121FF00E7CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6C035B32801220100E7CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6C035B62801220100E7CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C035B82801220100E7CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6D0EA2E280123E800EFE541 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,11 @@
 			children = (
 				A6C035AA280121FF00E7CF95 /* AppDelegate.swift */,
 				A6C035AC280121FF00E7CF95 /* SceneDelegate.swift */,
-				A6C035AE280121FF00E7CF95 /* ViewController.swift */,
+				A6C035AE280121FF00E7CF95 /* TableViewController.swift */,
+				A6D0EA2E280123E800EFE541 /* TableViewCell.swift */,
+				A62FB15428039CC2004AF046 /* CartaDetalles.swift */,
+				A62FB15128036DF3004AF046 /* Cartas.swift */,
+				A62FB14F28036DA6004AF046 /* Cartas.json */,
 				A6C035B0280121FF00E7CF95 /* Main.storyboard */,
 				A6C035B32801220100E7CF95 /* Assets.xcassets */,
 				A6C035B52801220100E7CF95 /* LaunchScreen.storyboard */,
@@ -126,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C035B72801220100E7CF95 /* LaunchScreen.storyboard in Resources */,
+				A62FB15028036DA6004AF046 /* Cartas.json in Resources */,
 				A6C035B42801220100E7CF95 /* Assets.xcassets in Resources */,
 				A6C035B2280121FF00E7CF95 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C035AF280121FF00E7CF95 /* ViewController.swift in Sources */,
+				A6C035AF280121FF00E7CF95 /* TableViewController.swift in Sources */,
+				A6D0EA2F280123E800EFE541 /* TableViewCell.swift in Sources */,
 				A6C035AB280121FF00E7CF95 /* AppDelegate.swift in Sources */,
+				A62FB15528039CC2004AF046 /* CartaDetalles.swift in Sources */,
 				A6C035AD280121FF00E7CF95 /* SceneDelegate.swift in Sources */,
+				A62FB15228036DF3004AF046 /* Cartas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
